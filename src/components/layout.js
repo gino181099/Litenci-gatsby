@@ -23,10 +23,14 @@ const Layout = ({ children }) => {
   `)
   const [cursorXY, setCursorXY] = useState({ x: -100, y: -100 })
   const [isLinkHoveredClass, setisLinkHoveredClass] = useState()
-  function isTouchDevice() {
-    return navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0
-  }
-  const isTouch = isTouchDevice()
+  // function isTouchDevice() {
+  //   return (
+  //     "ontouchstart" in window ||
+  //     navigator.maxTouchPoints > 0 ||
+  //     navigator.msMaxTouchPoints > 0
+  //   )
+  // }
+  // const isTouch = isTouchDevice()
   useEffect(() => {
     const moveCursor = e => {
       const x = e.clientX - 16
@@ -61,7 +65,7 @@ const Layout = ({ children }) => {
             transform: `translate3d(${cursorXY.x}px, ${cursorXY.y}px, 0) ${
               isLinkHoveredClass ? "scale(1.5)" : ""
             }`,
-            display: `${isTouch ? "none" : "flex"}`,
+            // display: `${isTouch ? "none" : "flex"}`,
           }}
         >
           {isLinkHoveredClass ? "Click" : " "}
