@@ -24,11 +24,7 @@ const Layout = ({ children }) => {
   const [cursorXY, setCursorXY] = useState({ x: -100, y: -100 })
   const [isLinkHoveredClass, setisLinkHoveredClass] = useState()
   function isTouchDevice() {
-    return (
-      "ontouchstart" in window ||
-      navigator.maxTouchPoints > 0 ||
-      navigator.msMaxTouchPoints > 0
-    )
+    return navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0
   }
   const isTouch = isTouchDevice()
   useEffect(() => {
