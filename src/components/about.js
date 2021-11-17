@@ -87,7 +87,7 @@ const About = () => {
       <div className="text_animation text-one" ref={ref} id="acerca">
         <p>
           <span className="an-1">
-            Ya sea que sea propietario de una empresa o administre un equipo
+            Ya sea propietario de una empresa o administre un equipo
           </span>
           <span className="bold">necesita saber cómo obtener resultados.</span>
         </p>
