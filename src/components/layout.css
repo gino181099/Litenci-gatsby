@@ -43,6 +43,14 @@ body {
 .cursor:hover {
   transition: 0.5s;
 }
+@media (max-width: 800px) {
+  .cursor {
+    display: none;
+  }
+  * {
+    cursor: unset;
+  }
+}
 article,
 aside,
 details,
@@ -224,6 +232,7 @@ header {
 header a {
   color: black;
 }
+
 .header-left a,
 .header-right,
 .header-left svg {
@@ -251,7 +260,32 @@ header a {
 .header-right .toggle {
   padding-right: 25px;
 }
-
+@media (max-width: 400px) {
+  .header-left a,
+  .header-right,
+  .header-right a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 310px) {
+  .header-left a,
+  .header-right,
+  .header-right a {
+    font-size: 12px;
+  }
+}
+@media (max-width: 280px) {
+  .header-left a,
+  .header-right,
+  .header-right a {
+    font-size: 10px;
+  }
+}
+@media (max-width: 250px) {
+  .contact__header {
+    display: none;
+  }
+}
 .menu {
   position: fixed;
   height: 100vh;
@@ -286,7 +320,54 @@ header a {
   font-size: 48px;
   padding: 25px 0;
 }
-
+.menu .right__menu ul {
+  padding-right: 25px;
+}
+.menu .left__menu ul {
+  padding-left: 25px;
+}
+@media (max-width: 600px) {
+  .menu {
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    justify-content: center;
+    padding: 10vh 0;
+  }
+  .menu .right__menu ul {
+    padding: 0px 25px;
+    text-align: center;
+  }
+  .menu .left__menu ul {
+    padding: 0px 25px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .menu .left__menu {
+    order: 2;
+  }
+  .menu .right__menu {
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 370px) {
+  .menu .right__menu ul li {
+    font-size: 28px;
+    padding: 15px 0;
+  }
+}
+@media (max-width: 300px) {
+  .redes__left svg {
+    height: 33px;
+    width: 33px;
+  }
+}
+@media (max-width: 260px) {
+  .menu .left__menu ul li {
+    font-size: 12px;
+  }
+}
 .link {
   position: relative;
   white-space: nowrap;
@@ -423,6 +504,35 @@ a {
   align-items: center;
   flex-wrap: wrap;
 }
+@media (max-width: 1217px) {
+  .heading {
+    height: unset;
+    justify-content: center;
+    padding: 100px 0;
+  }
+  .content {
+    text-align: center;
+  }
+}
+@media (max-width: 620px) {
+  .content h1 {
+    font-size: 48px;
+  }
+}
+@media (max-width: 400px) {
+  .content h1 {
+    font-size: 36px;
+    padding: 0 10px;
+  }
+  .btn__content a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 305px) {
+  .btn__content a {
+    margin-bottom: 10px;
+  }
+}
 .content {
   max-width: 700px;
   padding: 0 20px;
@@ -471,12 +581,13 @@ a {
 }
 .text_animation p {
   font-size: 60px;
-  line-height: 70px;
+  line-height: 150%;
   text-align: center;
   max-width: 1220px;
   padding: 0 10px;
   font-weight: 300;
 }
+
 .text_animation p .bold {
   font-weight: 500;
   display: block;
@@ -516,6 +627,41 @@ a {
 li {
   list-style: none;
 }
+@media (max-width: 1217px) {
+  .text_animation p {
+    font-size: 48px;
+    padding: 0 20px;
+  }
+  .text-three a {
+    font-size: 36px;
+  }
+}
+@media (max-width: 820px) {
+  .text_animation p {
+    font-size: 36px;
+  }
+  .text-three a {
+    font-size: 28px;
+  }
+}
+@media (max-width: 600px) {
+  .text_animation p {
+    font-size: 28px;
+    padding: 0 10px;
+  }
+  .text-three a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 380px) {
+  .text_animation p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+  .text-three {
+    display: none !important;
+  }
+}
 /* Details */
 .details {
   display: flex;
@@ -539,6 +685,22 @@ li {
 }
 .detail p {
   line-height: 150%;
+}
+@media (max-width: 360px) {
+  .detail h2 {
+    font-size: 24px;
+  }
+  .detail p {
+    font-size: 14px;
+  }
+  .details {
+    background-attachment: unset;
+  }
+}
+@media (max-width: 240px) {
+  .detail h2 {
+    font-size: 18px;
+  }
 }
 /* Works */
 .works {
@@ -596,6 +758,11 @@ li {
 .computadora img {
   object-fit: contain !important;
 }
+@media (max-width: 820px) {
+  .works .carrusel .computadora {
+    display: none;
+  }
+}
 .works .carrusel .item__carrusel img {
   object-fit: cover;
   left: 0;
@@ -622,7 +789,7 @@ li {
 blockquote {
   display: block;
   max-width: 1220px;
-  padding: 0 10px;
+  padding: 0 25px;
   margin: auto;
   font-size: 60px;
   line-height: 110%;
@@ -644,6 +811,30 @@ blockquote cite::before {
   border-top: 1px solid black;
   width: 4rem;
   margin: 0 1rem;
+}
+@media (max-width: 950px) {
+  blockquote {
+    font-size: 48px;
+  }
+  blockquote cite {
+    font-size: 28px;
+  }
+}
+@media (max-width: 690px) {
+  blockquote {
+    font-size: 32px;
+  }
+  blockquote cite {
+    font-size: 20px;
+  }
+}
+@media (max-width: 360px) {
+  blockquote {
+    font-size: 24px;
+  }
+  blockquote cite {
+    font-size: 16px;
+  }
 }
 /* Footer */
 footer {
