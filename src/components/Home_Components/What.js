@@ -7,24 +7,24 @@ export default function What() {
       <h3>desarrollamos</h3>
       <ul className="list__what">
         <li>
-          <a>
+          <p>
             Landing
             <br /> pages
-          </a>
+          </p>
         </li>
         <li>
-          <a>
+          <p>
             Ecommerce
             <br />
             websites
-          </a>
+          </p>
         </li>
         <li>
-          <a>
+          <p>
             Professional
             <br />
             websites
-          </a>
+          </p>
         </li>
       </ul>
       <p className="more">and more...</p>

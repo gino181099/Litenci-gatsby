@@ -1,5 +1,5 @@
 import React from "react"
-import Design from "../Assets/design.jpg"
+import Design from "../../Assets/design.jpg"
 
 export default function Heading() {
   return (
@@ -20,7 +20,7 @@ export default function Heading() {
       </div>
       <div className="design__heading">
         <p className="big">design</p>
-        <img src={Design} />
+        <img src={Design} alt="Web experience design" />
       </div>
     </div>
   )

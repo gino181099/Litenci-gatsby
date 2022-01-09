@@ -241,7 +241,7 @@ body {
   color: white;
   overflow-x: hidden;
 }
-.App,
+.layout,
 .header {
   max-width: 1920px;
   margin: auto;
@@ -269,6 +269,9 @@ body {
   column-gap: 25px;
   color: white;
   margin-right: 125px;
+}
+.menu a {
+  color: white;
 }
 .heading {
   padding-top: 100px;
@@ -363,7 +366,7 @@ body {
   flex-wrap: wrap;
   gap: 75px;
 }
-.what ul li a {
+.what ul li p {
   font-size: 120px;
   font-weight: 700;
   line-height: 90%;
@@ -464,6 +467,7 @@ body {
   display: flex;
   align-items: center;
   cursor: pointer;
+  color: white;
 }
 .contact .right__contact li svg {
   transform: translateY(-5px);

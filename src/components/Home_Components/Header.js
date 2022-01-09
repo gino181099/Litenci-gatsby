@@ -3,19 +3,21 @@ import React from "react"
 export default function Header() {
   return (
     <div className="header">
-      <a className="logo">Litenci</a>
+      <a className="logo" href="#inicio">
+        Litenci
+      </a>
       <ul className="menu">
         <li>
-          <a>Acerca</a>
+          <a href="#about">Acerca</a>
         </li>
         <li>
-          <a>Proyectos</a>
+          <a href="projects">Proyectos</a>
         </li>
         <li>
-          <a>Contacto</a>
+          <a href="contacto">Contacto</a>
         </li>
         <li>
-          <a>Menu</a>
+          <a href="#menu">Menu</a>
         </li>
       </ul>
     </div>
