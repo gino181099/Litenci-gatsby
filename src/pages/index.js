@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useRef } from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Home from "../components/Home"
@@ -8,7 +8,7 @@ const IndexPage = () => {
     <div className="smooth-scroll">
       <Layout>
         <Seo title="Inicio" />
-        <Home />
+        <Home className="home" />
       </Layout>
     </div>
   )

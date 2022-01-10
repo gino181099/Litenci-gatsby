@@ -5,9 +5,9 @@ import Tercero from "../../Assets/tercero.jpg"
 
 export default function How() {
   return (
-    <div className="how">
+    <div className="how" data-scroll-section>
       <h2>como lo Hacemos</h2>
-      <div className="left__how">
+      <div className="left__how" data-scroll>
         <p className="backFont__how">PRIMERO</p>
         <p>
           Contactas con nosotros, en base a dicho contacto, generamos un
@@ -17,7 +17,7 @@ export default function How() {
         </p>
         <img src={Primero} alt="Contacto con litenci" />
       </div>
-      <div className="right__how">
+      <div className="right__how" data-scroll>
         <p className="backFont__how">SEGUNDO</p>
         <img src={Segundo} alt="Fase de Prototipado" />
         <p>
@@ -26,7 +26,7 @@ export default function How() {
           usted le convenga, como también el tipo de hosting
         </p>
       </div>
-      <div className="left__how">
+      <div className="left__how" data-scroll>
         <p className="backFont__how">TERCERO</p>
         <p>
           Una vez terminado el sitio, el mismo es desplegado tomando en cuenta

@@ -3,7 +3,7 @@ import Design from "../../Assets/design.jpg"
 
 export default function Heading() {
   return (
-    <div className="heading">
+    <div className="heading" data-scroll-section>
       <div className="content__heading">
         <p className="big">Web</p>
         <p className="text__content">

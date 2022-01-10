@@ -9,8 +9,13 @@ const Loader = ({ setLoading }) => {
   })
   return (
     <div className="loader">
-      <h1>Loading</h1>
-      <p>...</p>
+      <span>L</span>
+      <span>I</span>
+      <span>T</span>
+      <span>E</span>
+      <span>N</span>
+      <span>C</span>
+      <span>I</span>
     </div>
   )
 }
