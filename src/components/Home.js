@@ -1,16 +1,30 @@
 // import "../layout.css"
-import React from "react"
+import React, { useState, useEffect } from "react"
 
 import Heading from "./Home_Components/Heading"
 import What from "./Home_Components/What"
 import How from "./Home_Components/How"
+import Loader from "./Home_Components/Loader"
 
 export default function Home() {
+  const [loading, setLoading] = useState(true)
+  useEffect(() => {
+    loading
+      ? document.querySelector("body").classList.add("loading")
+      : document.querySelector("body").classList.remove("loading")
+  }, [loading])
+
   return (
-    <div className="App">
-      <Heading />
-      <What />
-      <How />
-    </div>
+    <>
+      {loading ? (
+        <Loader setLoading={setLoading} />
+      ) : (
+        <>
+          <Heading />
+          <What />
+          <How />
+        </>
+      )}
+    </>
   )
 }
