@@ -343,10 +343,28 @@ body.loading .header {
   align-items: center;
   justify-content: center;
 }
+.loader p {
+  position: relative;
+}
+.loader p::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 7px;
+  display: block;
+  bottom: 5px;
+  background-color: var(--main-color);
+  animation: loadAnimation 2.5s ease-in 1 normal;
+}
 .loader span {
   font-size: 96px;
   color: var(--main-color);
   font-family: Poppins, sans-serif;
+}
+@keyframes loadAnimation {
+  from {
+    width: 0%;
+  }
 }
 /* Layout && header  */
 .layout,
@@ -449,7 +467,7 @@ body.loading .header {
 .what h2,
 .how h2 {
   text-transform: uppercase;
-  font-family: Bebas Neue;
+  font-family: Bebas Neue, sans-serif;
   text-align: center;
   font-size: 200px;
   max-width: 900px;
@@ -462,7 +480,7 @@ body.loading .header {
 }
 .what h3 {
   text-transform: uppercase;
-  font-family: Bebas Neue;
+  font-family: Bebas Neue, sans-serif;
   font-size: 54px;
   padding: 0px 50px;
   font-weight: 400;
@@ -490,7 +508,7 @@ body.loading .header {
   right: 0;
   transform: rotate(-90deg);
   font-weight: 400;
-  font-family: Bebas Neue;
+  font-family: Bebas Neue, sans-serif;
   font-size: 36px;
 }
 .how div {
@@ -528,7 +546,7 @@ body.loading .header {
   line-height: 100%;
   transform: translateY(-38%);
   color: var(--main-color);
-  font-family: Bebas Neue;
+  font-family: Bebas Neue, sans-serif;
   font-weight: 400;
   opacity: 20%;
   font-size: 400px;
@@ -548,7 +566,7 @@ body.loading .header {
 }
 .contact h2 {
   text-transform: uppercase;
-  font-family: Bebas Neue;
+  font-family: Bebas Neue, sans-serif;
   font-size: 200px;
   margin: 0 auto;
   font-weight: 400;
@@ -561,7 +579,7 @@ body.loading .header {
 }
 .contact .right__contact li a,
 .right__contact p {
-  font-family: Bebas Neue;
+  font-family: Bebas Neue, sans-serif;
   font-weight: 400;
   font-size: 48px;
 }
