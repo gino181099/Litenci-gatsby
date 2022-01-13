@@ -244,6 +244,11 @@ body {
 /*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
 html.has-scroll-smooth {
   overflow: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
 html.has-scroll-dragging {
@@ -323,6 +328,7 @@ html.has-scroll-dragging {
   right: auto;
   bottom: 0;
 }
+
 /* Loader */
 body {
   overflow: hidden;
@@ -460,6 +466,7 @@ body.loading .header {
   height: 50vh;
   object-fit: cover;
   transform: translateY(-115px);
+  will-change: transform;
 }
 .what {
   position: relative;
@@ -474,6 +481,8 @@ body.loading .header {
   margin: 0 auto;
   padding: 200px 20px;
   font-weight: 400;
+  /* opacity: 0;
+  transition: opacity 1s; */
 }
 .what h2 {
   padding-top: calc(200px - 115px);
@@ -517,7 +526,7 @@ body.loading .header {
   flex-wrap: wrap;
   justify-content: center;
   gap: 100px;
-  margin: 300px 0;
+  margin: 200px 0;
   align-items: flex-start;
 }
 .how div:nth-child(1) {
@@ -527,6 +536,7 @@ body.loading .header {
   width: 600px;
   filter: saturate(0%);
   object-fit: cover;
+  will-change: transform;
 }
 .how div p {
   width: 600px;
@@ -555,6 +565,9 @@ body.loading .header {
 .how .right__how .backFont__how {
   right: 33%;
   left: unset;
+}
+.how .right__how img {
+  order: -1;
 }
 .contact {
   display: flex;
@@ -598,4 +611,7 @@ body.loading .header {
 .contact .right__contact li svg {
   transform: translateY(-5px);
   padding-right: 10px;
+}
+.scroll-opacity {
+  opacity: 1;
 }

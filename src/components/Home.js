@@ -21,7 +21,7 @@ export default function Home() {
         <Loader setLoading={setLoading} />
       ) : (
         <>
-          <Heading />
+          <Heading loading={loading} />
           <What />
           <How />
           <Contact />

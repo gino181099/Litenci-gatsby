@@ -7,22 +7,22 @@
 
 import React, { useRef } from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+// import { useStaticQuery, graphql } from "gatsby"
 // import Header from "./header"
 import Header from "./Home_Components/Header"
 import "./layout.css"
 import { LocomotiveScrollProvider } from "react-locomotive-scroll"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query SiteTitleQuery {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //       }
+  //     }
+  //   }
+  // `)
   const containerRef = useRef(null)
 
   return (
@@ -46,7 +46,7 @@ const Layout = ({ children }) => {
           <main
             data-scroll-container
             ref={containerRef}
-            siteTitle={data.site.siteMetadata?.title || `Title`}
+            // siteTitle={data.site.siteMetadata?.title || `Title`}
           >
             {children}
           </main>

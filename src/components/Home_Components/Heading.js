@@ -1,7 +1,7 @@
 import React from "react"
-import Design from "../../Assets/design.jpg"
+import Design from "../../Assets/design.webp"
 
-export default function Heading() {
+export default function Heading({ loading }) {
   return (
     <div className="heading" data-scroll-section>
       <div className="content__heading">
@@ -20,7 +20,7 @@ export default function Heading() {
       </div>
       <div className="design__heading">
         <p className="big">design</p>
-        <img src={Design} alt="Web experience design" />
+        {!loading && <img src={Design} alt="Web experience design" />}
       </div>
     </div>
   )

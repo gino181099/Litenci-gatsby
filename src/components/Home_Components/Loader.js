@@ -1,4 +1,5 @@
 import React, { useEffect } from "react"
+import Image from "../Image"
 
 const Loader = ({ setLoading }) => {
   useEffect(() => {
@@ -21,5 +22,15 @@ const Loader = ({ setLoading }) => {
     </div>
   )
 }
-
+export const ImageBlock = ({ id }) => {
+  return (
+    <div className={`image-block ${id}`}>
+      <Image
+        src={process.env.PUBLIC_URL + `/images/${id}.webp`}
+        fallback={process.env.PUBLIC_URL + `/images/${id}.jpg`}
+        alt={id}
+      />
+    </div>
+  )
+}
 export default Loader
