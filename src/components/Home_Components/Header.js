@@ -8,17 +8,21 @@ export default function Header() {
       </a>
       <ul className="menu">
         <li>
-          <a href="#about">Acerca</a>
+          <a href="#about" className="pc-menu">
+            Acerca
+          </a>
         </li>
         <li>
-          <a href="projects">Proyectos</a>
+          <a href="projects" className="pc-menu">
+            Proyectos
+          </a>
         </li>
         <li>
           <a href="contacto">Contacto</a>
         </li>
-        <li>
+        {/* <li>
           <a href="#menu">Menu</a>
-        </li>
+        </li> */}
       </ul>
     </div>
   )

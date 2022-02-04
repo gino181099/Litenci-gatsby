@@ -391,6 +391,17 @@ body.loading .header {
   overflow-x: hidden;
   z-index: 999;
   mix-blend-mode: difference;
+  opacity: 0;
+  animation-name: textContent;
+  animation-duration: 1s;
+  animation-delay: 3.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: textContent;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 3.5s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
 }
 .logo {
   color: var(--main-color);
@@ -404,6 +415,11 @@ body.loading .header {
 }
 .menu a {
   color: white;
+}
+@media (max-width: 540px) {
+  .pc-menu {
+    display: none;
+  }
 }
 .heading {
   padding-top: 100px;
@@ -421,6 +437,7 @@ body.loading .header {
   line-height: 120%;
   mix-blend-mode: difference;
 }
+
 .an_1 {
   clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
   -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
@@ -460,15 +477,60 @@ body.loading .header {
   font-size: 24px;
   font-weight: 600;
   mix-blend-mode: difference;
+  opacity: 0;
+  animation-name: textContent;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: textContent;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 0.5s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+}
+@keyframes textContent {
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 840px) {
+  .big {
+    font-size: 7rem;
+  }
+}
+@media (max-width: 540px) {
+  .big {
+    font-size: 5rem;
+  }
+  .text__content {
+    font-size: 1rem;
+    padding: 0 10px;
+    text-align: center;
+  }
 }
 .marquee__heading {
   width: fit-content;
   display: flex;
   position: relative;
   transform: translate3d(calc(-25%), 0, 0);
+
   animation: marquee 5s linear infinite;
   column-gap: 100px;
   mix-blend-mode: difference;
+}
+.marquee__heading .big {
+  opacity: 0;
+  animation-name: textContent;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: textContent;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 0.5s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
 }
 @keyframes marquee {
   0% {
@@ -504,8 +566,33 @@ body.loading .header {
 }
 .heading .gatsby-image-wrapper {
   transform: translateY(-115px) !important;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  animation-name: textClip;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: textClip;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 0.5s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
 }
 
+@media (max-width: 840px) {
+  .heading .gatsby-image-wrapper {
+    transform: translateY(-59px) !important;
+  }
+}
+@media (max-width: 540px) {
+  .heading .gatsby-image-wrapper {
+    transform: translateY(-43px) !important;
+  }
+  .design__heading img {
+    height: 25vh;
+  }
+}
 .what {
   position: relative;
 }
@@ -522,6 +609,7 @@ body.loading .header {
   /* opacity: 0;
   transition: opacity 1s; */
 }
+
 .what h2 {
   padding-top: calc(200px - 115px);
 }
@@ -558,10 +646,11 @@ body.loading .header {
   font-family: Bebas Neue, sans-serif;
   font-size: 36px;
 }
+
 .how div {
   position: relative;
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   justify-content: center;
   gap: 100px;
   margin: 200px 0;
@@ -614,6 +703,51 @@ body.loading .header {
   order: -1;
   width: 600px;
   max-width: 600px;
+}
+@media (max-width: 1300px) {
+  .how .right__how .img {
+    order: 1;
+  }
+  .how .backFont__how {
+    left: unset;
+    margin: 0 auto;
+  }
+  .how .right__how .backFont__how {
+    right: unset;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1000px) {
+  .what h2,
+  .how h2 {
+    font-size: 7rem;
+  }
+  .what h3,
+  .what ul li p {
+    font-size: 2.5rem;
+  }
+  .how div p {
+    font-size: 1.5rem;
+    width: 80%;
+  }
+  .what ul li p {
+    -webkit-text-stroke: 1px white;
+  }
+  .what .more {
+    display: none;
+  }
+  .how .backFont__how {
+    font-size: 14rem;
+  }
+}
+@media (max-width: 540px) {
+  .what h2,
+  .how h2 {
+    font-size: 5rem;
+  }
+  .how .backFont__how {
+    font-size: 7rem;
+  }
 }
 .contact {
   display: flex;
