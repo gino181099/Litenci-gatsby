@@ -11,7 +11,7 @@ import PropTypes from "prop-types"
 // import Header from "./header"
 import Header from "./Home_Components/Header"
 import "./layout.css"
-import { LocomotiveScrollProvider } from "react-locomotive-scroll"
+// import { LocomotiveScrollProvider } from "react-locomotive-scroll"
 
 const Layout = ({ children }) => {
   // const data = useStaticQuery(graphql`
@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <LocomotiveScrollProvider
+      {/* <LocomotiveScrollProvider
         options={{
           smooth: true,
           // ... all available Locomotive Scroll instance options
@@ -40,18 +40,18 @@ const Layout = ({ children }) => {
           ]
         }
         containerRef={containerRef}
-      >
-        <div className="layout">
-          <Header />
-          <main
-            data-scroll-container
-            ref={containerRef}
-            // siteTitle={data.site.siteMetadata?.title || `Title`}
-          >
-            {children}
-          </main>
-        </div>
-      </LocomotiveScrollProvider>
+      > */}
+      <div className="layout">
+        <Header />
+        <main
+          data-scroll-container
+          ref={containerRef}
+          // siteTitle={data.site.siteMetadata?.title || `Title`}
+        >
+          {children}
+        </main>
+      </div>
+      {/* </LocomotiveScrollProvider> */}
     </>
   )
 }

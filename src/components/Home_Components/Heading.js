@@ -1,11 +1,12 @@
+import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
-import Design from "../../Assets/design.webp"
+// import Design from "../../Assets/design.webp"
 
 export default function Heading({ loading }) {
   return (
     <div className="heading" data-scroll-section>
       <div className="content__heading">
-        <p className="big">Web</p>
+        <p className="big an_1">Web</p>
         <p className="text__content">
           Brindamos servicios de diseño y desarrollo que no solo aumentarán la
           visibilidad y los ingresos de su empresa, sino que también le
@@ -19,8 +20,13 @@ export default function Heading({ loading }) {
         <p className="big">experiences</p>
       </div>
       <div className="design__heading">
-        <p className="big">design</p>
-        {!loading && <img src={Design} alt="Web experience design" />}
+        <p className="big an_2">design</p>
+        {!loading && (
+          <StaticImage
+            src="../../Assets/design.webp"
+            alt="Web experience design"
+          />
+        )}
       </div>
     </div>
   )

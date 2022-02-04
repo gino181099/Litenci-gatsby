@@ -2,10 +2,8 @@ import React from "react"
 
 export default function What() {
   return (
-    <div className="what" data-scroll-section>
-      <h2 data-scroll data-scroll-speed="4" data-scroll-class="scroll-opacity">
-        que es lo que Hacemos
-      </h2>
+    <div className="what">
+      <h2>que es lo que Hacemos</h2>
       <h3>desarrollamos</h3>
       <ul className="list__what">
         <li>

@@ -331,11 +331,11 @@ html.has-scroll-dragging {
 
 /* Loader */
 body {
-  overflow: hidden;
-  height: 100vh;
+  overflow-x: hidden;
 }
 body.loading .header {
   opacity: 0;
+  height: 100vh;
 }
 .loader {
   width: 100%;
@@ -421,6 +421,40 @@ body.loading .header {
   line-height: 120%;
   mix-blend-mode: difference;
 }
+.an_1 {
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  animation-name: textClip;
+  animation-duration: 1s;
+  /* animation-delay: 1.5s; */
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: textClip;
+  -webkit-animation-duration: 1s;
+  /* -webkit-animation-delay: 1.5s; */
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+}
+.an_2 {
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  animation-name: textClip;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: textClip;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 0.5s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+}
+@keyframes textClip {
+  to {
+    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+  }
+}
 .text__content {
   max-width: 500px;
   font-size: 24px;
@@ -462,12 +496,16 @@ body.loading .header {
   z-index: 2;
 }
 .design__heading img {
-  width: 100%;
+  width: 100vw;
   height: 50vh;
   object-fit: cover;
-  transform: translateY(-115px);
+  /* transform: translateY(-115px) !important; */
   will-change: transform;
 }
+.heading .gatsby-image-wrapper {
+  transform: translateY(-115px) !important;
+}
+
 .what {
   position: relative;
 }
@@ -523,7 +561,7 @@ body.loading .header {
 .how div {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: center;
   gap: 100px;
   margin: 200px 0;
@@ -533,10 +571,16 @@ body.loading .header {
   margin-top: 0;
 }
 .how img {
-  width: 600px;
+  width: 100%;
   filter: saturate(0%);
-  object-fit: cover;
-  will-change: transform;
+  object-fit: contain;
+  /* will-change: transform; */
+}
+.how .gatsby-image-wrapper {
+  width: 600px;
+  max-width: 600px;
+  transform: translateY(-50%);
+  height: 400px;
 }
 .how div p {
   width: 600px;
@@ -566,8 +610,10 @@ body.loading .header {
   right: 33%;
   left: unset;
 }
-.how .right__how img {
+.how .right__how .img {
   order: -1;
+  width: 600px;
+  max-width: 600px;
 }
 .contact {
   display: flex;
