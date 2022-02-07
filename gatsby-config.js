@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Litenci Diseño Web en Mendoza`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Compañia de creación de sitios web para empresas.`,
     author: `@litenci`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://litenci.com/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -38,7 +38,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         theme_color: `#ffffff`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/Assets/android-chrome-192x192.png`, // This path is relative to the root of the site.
       },
     },
 
